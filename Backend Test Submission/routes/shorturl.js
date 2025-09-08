@@ -31,7 +31,7 @@ router.post('/', async (req, res) => {
   Log('backend', 'info', 'controller', `Shortened URL created: ${code}`)
 
   res.status(201).json({
-    shortLink: `${process.env.BASE_URL}/${code}`,
+    shortLink: `${process.env.BASE_URL}/shorturls/${code}/redirect`,
     expiry: expiry.toISOString()
   })
 })
